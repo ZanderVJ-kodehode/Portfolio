@@ -1,0 +1,631 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --bg-color: #1f1f21;
+    --text-color: #fff;
+    --main-color: #ffae00;
+
+    --big-font: 4rem;
+    --p-font: 1.1re;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////First page///////////////////////////////////////////////////////////////////////// */
+.first-page{
+    width: 100%;
+    height: 100vh;
+}
+
+
+header{
+    /* position: fixed; ----- if i want it to stay when scroling */
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 15%;
+    background: transparent;
+    transition: all ease .45s;
+
+}
+
+.logo{
+    color: var(--text-color);
+    font-size: 41px;
+    font-weight: 600;
+
+}
+
+.logo span{
+    color: var(--main-color);
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 25px;
+    transition: all ease .50s;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.navbar a.active{
+    color: var(--main-color);
+}
+
+.menu-btn{
+    background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
+    box-shadow: 0px 20px 40px #00000070;
+    border: 1px solid #3b3b3b;
+    padding: 10px 20px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+/* #menu-icon{
+    font-size: 28px;
+    margin-left: 10px;
+    z-index: 6;
+} */
+
+section{
+    padding: 0 15%;
+}
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+.home-img{
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.home-img img{
+    border-radius: 40%;
+}
+
+
+
+.home-text span{
+    padding: 5px 25px;
+    background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
+    box-shadow: 0px 20px 40px #00000070;
+    border: 1px solid #3b3b3b;
+    border-radius: 100px;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 15px;
+    /* text-transform: uppercase; */
+}
+
+.home-text h1{
+    font-size: var(--big-font);
+    margin: 23px 0;
+}
+
+
+.home-text p{
+    font-size: var(--p-font);
+    font-weight: 400;
+    color: #c3c3c3;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 14px 34px;
+    background: var(--main-color);
+    color: var(--text-color);
+    border: 2px solid var(--main-color);
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.6s ease-in-out;
+}
+
+.btn:hover{
+    transform: translateY(-px);
+    background: transparent;
+    color: var(--main-color);
+}
+
+/* .two{
+    background: #141414;
+    border: 2px solid #141414;
+    color: var(--text-color);
+    margin-left: 25px;
+}
+
+.two:hover{
+    color: #141414;
+    background: var(--text-color);
+    border: 2px solid var(--text-color);
+} */
+
+/* .share{
+    position: absolute;
+    bottom: 3rem;
+    left: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.share p{
+    font-size: 17px;
+    color: var(--text-color);
+    margin-right: 25px;
+}
+
+.social i{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
+    box-shadow: 0px 20px 40px #00000070;
+    border: 1px solid #3b3b3b;
+    border-radius: 50%;
+    color: var(--text-color);
+    font-size: 20px;
+    margin: 0 7px;
+    transition: all 0.6s ease-in-out;
+}
+
+.social i:hover{
+    transform: translateY(-10px);
+} */
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////second page about me///////////////////////////////////////////////////////////////////////// */
+
+
+.about-me{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    padding: 32px 15%;
+}
+
+
+.about-me .inside{
+    display: flex;
+    align-items: center;
+}
+
+
+.about-me .inside .info h1 {
+    position: relative;
+    color: #ffae00;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.about-me .inside .info h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffae00;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.about-me .inside .info h1:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about-me h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.about-me img {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.info {
+    margin-left: 60px; 
+    text-align: center;
+}
+
+.container{
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--main-color);
+    text-align: start;
+    width: 350px;
+    margin: 0 auto;
+}
+
+
+.container li {
+    margin-top: 10px;
+}
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////therd page my knowledge///////////////////////////////////////////////////////////////////////// */
+
+
+
+.my-knowledge {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center; /* Center content horizontally */
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text */
+    padding: 32px 15%;
+}
+
+
+.grid-container {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    flex-direction: row;
+    position: relative;
+}
+
+.grid-container ul{
+    position: relative;
+
+}
+.grid-container li {
+    display: flex; 
+    flex-direction: column;
+    position: relative;
+}
+
+.grid-container img {
+    display: block;
+    width: auto;
+    height: 80px; /* Maintain aspect ratio */
+}
+
+.grid-container p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: .5s ease;
+    opacity: 0;
+    font-size: 15px;
+    padding: 0px 15px;
+    text-align: center;
+    margin: 0;
+}
+
+.grid-container ul:hover p {
+    opacity: 1;
+}
+
+  .my-knowledge p {
+    margin-top: 100px;
+    text-align: center;
+    color: var(--main-color);
+    line-height: 1.5;
+}
+
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////foorth page my prosjekt///////////////////////////////////////////////////////////////////////// */
+
+
+
+.My-prosjekt {
+    margin-top: 50px;
+    width: 100%;
+    height: 100vh;
+    padding: 32px 15%;
+}
+
+.My-prosjekt h1 {
+    display: flex;
+    justify-content: center;
+    color: var(--main-color);
+    margin-bottom: 20px; /* Removed duplicate property */
+}
+
+.My-prosjekt h5 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 25px;
+    transition: all ease .50s;
+}
+
+.My-prosjekt h5:hover {
+    color: var(--main-color);
+}
+
+.My-prosjekt img {
+    width: 300px;
+    border-radius: 10px;
+    display: block;
+
+    box-shadow: 1px 1px 5px var(--main-color);
+}
+
+.my-prosjekt-container {
+    display: grid;
+    height: 550px;
+    grid-template-columns: auto auto auto;
+    /* background-color: #3b3b3b; */
+    padding: 10px;
+    grid-column-gap: 50px;
+    grid-row-gap: 100px;
+}
+
+.my-prosjekt-container div {
+    width: 300px;
+    height: 200px;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.my-prosjekt-container a {
+    position: relative;
+}
+
+.my-prosjekt-container p {
+    position: absolute; 
+    top: 0;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+.my-prosjekt-container a:hover p {
+    opacity: 1;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////fift page contact me///////////////////////////////////////////////////////////////////////// */
+
+
+
+  .Contact-me{
+    /* margin-top: 50px; */
+    width: 100%;
+    height: 100vh;
+    padding: 32px 15%;
+  }
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////@ media///////////////////////////////////////////////////////////////////////// */
+
+
+
+
+  @media (max-width: 1000px){
+    .navbar a{
+        margin: 0 15px;
+    }
+    :root {
+        --big-font: 5rem;
+        --p-font: 1rem;
+        transition: .2s;
+      }
+
+}
+
+@media (max-width: 950px){
+    /* .share{
+        display:none;
+    } */
+    section{
+        padding: 70px 4%;
+    }
+    header{
+        padding: 10px 5%;
+        background: #2d2d2d;
+    }
+    .home{
+        height: auto;
+        /* display: flex; */
+        flex-wrap: wrap;
+    }
+    .home-text{
+        order: 2;
+    }
+    /* .home-img{
+        margin: auto;
+        height: auto;
+        width: auto;
+    } */
+    /* .home-img img{
+        max-width: 450px;
+        width: 100%;
+        height: auto;
+    } */
+
+}
+
+@media (max-width: 700px){
+    .navbar{
+        display: none;
+
+        /* position: absolute;
+        width: 100%;
+        height: 100vh;
+        padding: 40px 50px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #2d2d2d;
+        transition: all 0.4s ease-in-out; */
+
+    }
+
+    /* .navbar a{
+        display: block;
+        color: #c3c3c3;
+        padding: 0px;
+        margin-bottom: 40px;
+        font-weight: 400;
+    }
+
+    .navbar.open{
+        left: 0;
+    } */
+}
+
+@media (max-width: 500px){
+    /* :root{
+        --big-font: 5rem;
+        --p-font: 15px;
+        transition: .2s;
+        
+    } */
+    .btn{
+        padding: 10px 30px;
+    }
+
+}
+
+.home-img{
+    animation: imgg 3s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+
+@keyframes imgg{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-20px)
+    }
+
+    100%{
+        transform: translateY(0)
+    }
+}
+
+
+
+/* 
+
+@media (max-width: 1850px) {
+    header {
+      padding: 15px 8%;
+      transition: .2s;
+    }
+    section {
+      padding: 0 8%;
+      transition: .2s;
+    }
+    .share {
+      left: 8%;
+      transition: .2s;
+    }
+  }
+  
+  @media (max-width: 1370px) {
+    header {
+      padding: 15px 4%;
+      transition: .2s;
+    }
+    section {
+      padding: 0 4%;
+      transition: .2s;
+    }
+    .share {
+      left: 4%;
+      transition: .2s;
+    }
+    :root {
+      --big-font: 7rem;
+      --p-font: 1.1rem;
+      transition: .2s;
+    }
+  } */
