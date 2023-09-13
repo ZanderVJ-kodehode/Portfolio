@@ -141,11 +141,30 @@ section{
     width: 60%;
     height: 60%;
     object-fit: contain;
+    animation: img 3s ease-in-out infinite;
+    animation-delay: 0.5s;
 }
 
 .home-img img{
     border-radius: 40%;
+    
 }
+
+@keyframes img{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-20px)
+    }
+
+    100%{
+        transform: translateY(0)
+    }
+}
+
+
 
 
 
@@ -362,7 +381,7 @@ section{
 ///////////////////////////////////////////////////////therd page my knowledge///////////////////////////////////////////////////////////////////////// */
 
 .my-knowledge {
-    margin-top: 100px;
+    margin-top: 200px;
     margin-bottom: 200px;
     width: 100%;
     height: 50vh;
@@ -747,27 +766,6 @@ margin-bottom: 50px;
     }
 
 }
-
-.home-img{
-    animation: imgg 3s ease-in-out infinite;
-    animation-delay: 0.5s;
-}
-
-
-@keyframes imgg{
-    0%{
-        transform: translateY(0);
-    }
-
-    50%{
-        transform: translateY(-20px)
-    }
-
-    100%{
-        transform: translateY(0)
-    }
-}
-
 
 
 /* 
