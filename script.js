@@ -143,3 +143,49 @@ stay.reveal(".home-img",{delay:700, origin: "right"});
             }
         });
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function translateToNorwegian() {
+        const elementsToTranslate = document.querySelectorAll('[data-translate]');
+    
+        elementsToTranslate.forEach(element => {
+            const textToTranslate = element.dataset.translate;
+            const targetLanguage = 'no'; // Språkkoden for norsk
+            const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${encodeURI(textToTranslate)}`;
+    
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const translatedText = data[0][0][0];
+                    element.innerText = translatedText;
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    }
+    
