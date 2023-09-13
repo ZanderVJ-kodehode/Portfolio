@@ -97,7 +97,7 @@ stay.reveal(".home-img",{delay:700, origin: "right"});
                 if (targetId === 'about-me') {
                     offset = 10; // Adjust as needed
                 } else if (targetId === 'my-knowledge') {
-                    offset = 150; // Adjust as needed
+                    offset = 0; // Adjust as needed
                 } else if (targetId === 'My-projects') {
                     offset = 0; // Adjust as needed
                 } else if (targetId === 'Contact-me') {

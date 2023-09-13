@@ -354,7 +354,25 @@ section{
     width: 400px;
     height: auto;
     border-radius: 20px;
+
+    animation: aboutMeAnimation 3s ease-in-out infinite;
+    animation-delay: 0.5s;
 }
+
+@keyframes aboutMeAnimation {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateX(-20px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
 
 .info {
     margin-left: 60px; 
@@ -671,6 +689,19 @@ margin-bottom: 50px;
 
 
   @media (max-width: 1000px){
+
+    /* all */
+.about-me, .my-knowledge, .certification, .My-projects, .Contact-me{
+    padding: 32px 10%;
+    
+
+}
+
+h3{
+    font-size: x-large;
+}
+
+/* 1 */
     .navbar a{
         margin: 0 15px;
     }
@@ -686,6 +717,157 @@ margin-bottom: 50px;
         height: 300px;
         width: auto;
     }
+
+/* 2 */
+
+.about-me .inside{
+    display: flex;
+    align-items: center;
+}
+
+
+.about-me h2{
+    font-size: 10px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.about-me img {
+    width: 300px;
+    height: auto;
+}
+
+.container li {
+    font-size: small;
+}
+
+
+
+/* 3 */
+
+.grid-container {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-direction: row;
+    position: relative;
+    padding: 32px 10%;
+}
+
+
+.grid-container img {
+    display: block;
+    width: auto;
+    height: 70px;
+}
+
+.grid-container p {
+    font-size: 15px;
+}
+
+
+.certification img{
+    width: auto;
+    height: 200px;
+    margin: 20px;
+}
+
+.certification img:hover{
+    width: auto;
+    height: 210px;
+    margin: 10px 17px;
+}
+
+
+
+  .my-knowledge p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+
+/* 4 */
+
+.My-projects h5 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 25px;
+}
+
+.My-projects img {
+    width: 250px;
+}
+
+.my-projects-container {
+    display: grid;
+    height: 550px;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+}
+
+.my-projects-container div {
+    align-items: center;
+    width: 250px;
+    height: 150px;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.my-projects-container button{
+    margin-top: 10px;
+    width: 60px;
+    padding: 6px 3px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+.my-projects-container p {
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+}
+
+
+
+
+/* 5 */
+
+
+.cm .text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start;
+    font-size: 12px;
+    margin-bottom: 300px;
+    width: 400px;
+}
+
+.cm .text h2{
+margin-bottom: 50px;
+}
+
+
+.cm .box {
+    margin-left: 150px;
+    margin-bottom: 150px;
+}
+
+.box input,
+.box textarea {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    resize: vertical;
+
+}
 
 
 }
@@ -752,6 +934,186 @@ margin-bottom: 50px;
     .navbar.open{
         left: 0;
     } */
+
+        /* all */
+.about-me, .my-knowledge, .certification, .My-projects, .Contact-me{
+    padding: 32px 8%;
+    
+
+}
+
+h3{
+    font-size: x-large;
+}
+
+/* 1 */
+    .navbar a{
+        margin: 0 15px;
+    }
+    :root {
+        --big-font: 3rem;
+        --p-font: 0.8rem;
+        transition: .2s;
+      }
+      .btn{
+        padding: 10px 30px;
+    }
+    .home-img img{
+        height: 250px;
+        width: auto;
+    }
+
+/* 2 */
+
+.about-me .inside{
+    display: flex;
+    align-items: center;
+}
+
+
+.about-me h2{
+    font-size: 10px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.about-me img {
+    width: 250px;
+    height: auto;
+}
+
+.container li {
+    font-size: small;
+}
+
+
+
+/* 3 */
+
+.grid-container {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-direction: row;
+    position: relative;
+}
+
+
+.grid-container img {
+    display: block;
+    width: auto;
+    height: 60px;
+}
+
+.grid-container p {
+    font-size: 15px;
+}
+
+
+.certification img{
+    width: auto;
+    height: 200px;
+    margin: 20px;
+}
+
+.certification img:hover{
+    width: auto;
+    height: 210px;
+    margin: 10px 17px;
+}
+
+
+
+  .my-knowledge p {
+    margin-top: 10px;
+    font-size: 11px;
+}
+
+
+/* 4 */
+
+.My-projects h5 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 25px;
+}
+
+.My-projects img {
+    width: 250px;
+}
+
+.my-projects-container {
+    display: grid;
+    height: 550px;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+}
+
+.my-projects-container div {
+    align-items: center;
+    width: 250px;
+    height: 150px;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.my-projects-container button{
+    margin-top: 10px;
+    width: 60px;
+    padding: 6px 3px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+.my-projects-container p {
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+}
+
+
+
+
+/* 5 */
+
+
+.cm .text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: start;
+    font-size: 10px;
+    margin-bottom: 300px;
+    width: 300px;
+}
+
+.cm .text h2{
+margin-bottom: 30px;
+}
+
+
+.cm .box {
+    margin-left: 50px;
+    margin-bottom: 150px;
+}
+
+.box input,
+.box textarea {
+    width: 200px;
+    padding: 10px;
+    outline: none;
+    resize: vertical;
+}
+
+
+
 }
 
 @media (max-width: 500px){
