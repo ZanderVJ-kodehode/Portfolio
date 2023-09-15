@@ -1,3 +1,7 @@
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////All///////////////////////////////////////////////////////////////////////// */
+
+
 *{
     padding: 0;
     margin: 0;
@@ -53,11 +57,12 @@ h3:hover::after {
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////First page///////////////////////////////////////////////////////////////////////// */
+
+
 .first-page{
     width: 100%;
     height: 100vh;
 }
-
 
 header{
     /* position: fixed; ----- if i want it to stay when scroling */
@@ -97,6 +102,9 @@ header{
     transition: all ease .50s;
 }
 
+.navbar li a{
+    font-size: 20px;
+}
 .navbar #switch{
     color: var(--main-color);
     background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
@@ -130,11 +138,6 @@ header{
     align-items: center;
     cursor: pointer;
 }
-/* #menu-icon{
-    font-size: 28px;
-    margin-left: 10px;
-    z-index: 6;
-} */
 
 section{
     padding: 0 15%;
@@ -147,7 +150,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    /* gap: 30px; */
 }
 
 
@@ -161,6 +164,8 @@ section{
 
 .home-img img{
     border-radius: 40%;
+    width: 350px;
+    height: auto;
     
 }
 
@@ -178,10 +183,6 @@ section{
     }
 }
 
-
-
-
-
 .home-text span{
     padding: 5px 25px;
     background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
@@ -195,7 +196,7 @@ section{
 }
 
 .home-text h1{
-    font-size: var(--big-font);
+    font-size: 80px;
     margin: 23px 0;
 }
 
@@ -226,7 +227,6 @@ section{
     color: var(--main-color);
 }
 
-
 .scroll-button {
     position: fixed;
     bottom: 20px;
@@ -252,7 +252,6 @@ section{
     transform: translate(-50%, -50%);
 }
 
-
 .scroll-button:hover {
     background-color: var(--bg-color);
     border: solid 3px var(--main-color);
@@ -276,12 +275,10 @@ section{
     padding: 32px 15%;
 }
 
-
 .about-me .inside{
     display: flex;
     align-items: center;
 }
-
 
 .about-me .inside .info h1 {
     position: relative;
@@ -308,8 +305,6 @@ section{
     transform-origin: bottom left;
     transform: scaleX(1);
 }
-
-
 
 .about-me h2{
     font-size: 18px;
@@ -340,7 +335,6 @@ section{
     }
 }
 
-
 .info {
     margin-left: 60px; 
     text-align: center;
@@ -355,7 +349,6 @@ section{
     margin: 0 auto;
 }
 
-
 .container li {
     margin-top: 10px;
     /* font-size: 10px; */
@@ -365,6 +358,8 @@ section{
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////therd page my knowledge///////////////////////////////////////////////////////////////////////// */
+
+
 
 .my-knowledge {
     margin-top: 200px;
@@ -378,8 +373,9 @@ section{
     text-align: center; /* Center text */
     padding: 32px 15%;
 }
-
-
+.my-knowledge h3{
+    margin: 30px 0px;
+}
 .grid-container {
     display: flex;
     list-style: none;
@@ -422,13 +418,11 @@ section{
     opacity: 1;
 }
 
-
 .certification{
     display: flex;
     text-align: center;
     justify-content: center;
 }
-
 
 .certification img{
     width: auto;
@@ -441,8 +435,6 @@ section{
     height: 210px;
     margin: 10px 17px;
 }
-
-
 
   .my-knowledge p {
     margin-top: 10px;
@@ -506,8 +498,6 @@ section{
     text-align: center;
 }
 
-
-
 .my-projects-container div {
     align-items: center;
     width: 300px;
@@ -543,10 +533,6 @@ section{
     background: transparent;
     color: var(--main-color);
 }
-
-
-
-
 
 .my-projects-container p {
     position: absolute; 
@@ -606,13 +592,11 @@ margin-bottom: 50px;
     color: var(--main-color);
 }
 
-
-
 .cm .box {
     margin-left: 200px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 150px;
+    margin-bottom: 270px;
 }
 
 .box input,
@@ -660,19 +644,36 @@ margin-bottom: 50px;
 
 
 
-  @media (max-width: 1000px){
+
+@media (max-width: 1400px){
+    .navbar li a{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1200px){
+    .navbar li a{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1100px){
+    .navbar li a{
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 1000px){
 
     /* all */
 .about-me, .my-knowledge, .certification, .My-projects, .Contact-me{
-    padding: 32px 10%;
+    /* padding: 32px 10%; */
     
 
 }
 
 h3{
     font-size: x-large;
-    margin-top: 30px;
-    margin-right: 30px;
 }
 
 /* 1 */
@@ -697,7 +698,15 @@ h3{
         width: auto;
     }
 
+    .home-text h1{
+        font-size: 60px;
+        margin: 23px 0;
+    }
+
 /* 2 */
+.about-me{
+    height: 10vh;
+}
 
 .about-me .inside{
     display: flex;
@@ -839,7 +848,7 @@ margin-bottom: 50px;
 
 .cm .box {
     margin-left: 150px;
-    margin-bottom: 150px;
+    margin-bottom: 270px;
 }
 
 .box input,
@@ -850,14 +859,10 @@ margin-bottom: 50px;
     resize: vertical;
 
 }
-
-
-}
+  }
 
 @media (max-width: 950px){
-    /* .share{
-        display:none;
-    } */
+    
     section{
         padding: 70px 4%;
     }
@@ -874,7 +879,12 @@ margin-bottom: 50px;
         order: 2;
     }
 
+    /* .about-me{
+        height: 1vh;
+    } */
+
 }
+
 @media (max-width: 800px){
     .navbar{
         margin: 0 5px;
@@ -1134,18 +1144,6 @@ margin-bottom: 30px;
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 700px){
 
 
@@ -1164,11 +1162,8 @@ margin-bottom: 30px;
     }
 }
 
-
-
-
-    @media (max-width: 550px){
-        /* 1 */
+@media (max-width: 550px){
+        
             
         
             .navbar li a{
@@ -1178,35 +1173,9 @@ margin-bottom: 30px;
         
             .logo{
                 font-size: 15px;
-            }
-        }
-        
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
+            } 
+}
+   
 @media (max-width: 650px){
     .navbar a{
         margin: 0 15px;
@@ -1282,7 +1251,7 @@ h3{
 
 /* 3 */
 .my-knowledge{
-    margin-top: 180px;
+    margin-top: 280px;
 }
 .grid-container {
     display: grid;
@@ -1423,23 +1392,7 @@ margin-bottom: 20px;
     width: 80%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 @media (max-width: 500px){
     .scroll-button {
@@ -1495,9 +1448,9 @@ h3{
 
 
 /* 3 */
-.my-knowledge{
+/* .my-knowledge{
     margin-top: 180px;
-}
+} */
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -1603,14 +1556,7 @@ h3{
     justify-content: center;
     text-align: center;
 }
-
-
-
-
-
-
-
-
+}
 
 @media (max-width: 400px){
 
@@ -1709,3 +1655,4 @@ h3{
 
 }
 
+/* i have to change the height on on all main. eks 100vh goes to 0 or 10, maybe - */
