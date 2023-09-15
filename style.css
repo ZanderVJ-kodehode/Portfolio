@@ -196,7 +196,7 @@ section{
 }
 
 .home-text h1{
-    font-size: 80px;
+    font-size: 70px;
     margin: 23px 0;
 }
 
@@ -705,7 +705,7 @@ h3{
 
 /* 2 */
 .about-me{
-    height: 10vh;
+    /* height: 100vh; */
 }
 
 .about-me .inside{
