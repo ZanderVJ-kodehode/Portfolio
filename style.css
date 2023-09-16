@@ -54,6 +54,12 @@ h3:hover::after {
     transform: scaleX(1);
 }
 
+/* .about-me, .my-knowledge, .certification, .My-projects, .Contact-me{
+    min-height: 100vh; 
+    
+
+} */
+
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////First page///////////////////////////////////////////////////////////////////////// */
@@ -1663,3 +1669,20 @@ h3{
 }
 
 /* i have to change the height on on all main. eks 100vh goes to 0 or 10, maybe - */
+
+
+
+@media screen and (max-height: 700px) {
+    .first-page, .about-me, .my-knowledge, .My-projects {margin-bottom: 150px;
+    }
+}
+
+@media screen and (max-height: 550px) {
+    .first-page, .about-me, .my-knowledge, .My-projects {margin-bottom: 250px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .first-page, .about-me, .my-knowledge, .My-projects {margin-bottom: 300px;
+    }
+}
