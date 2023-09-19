@@ -104,12 +104,12 @@ header{
     font-size: var(--p-font);
     font-weight: 500;
     color: var(--text-color);
-    margin: 0 25px;
+    margin: 0 20px;
     transition: all ease .50s;
 }
 
 .navbar li a{
-    font-size: 20px;
+    font-size: 15px;
 }
 .navbar #switch{
     color: var(--main-color);
@@ -392,6 +392,7 @@ section{
 
 .grid-container ul{
     position: relative;
+    /* overflow: hidden;  */
 
 }
 .grid-container li {
@@ -404,6 +405,7 @@ section{
     display: block;
     width: auto;
     height: 80px; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
 }
 
 .grid-container p {
@@ -412,16 +414,22 @@ section{
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.5);
-    transition: .5s ease;
+    transition: .3s ease;
     opacity: 0;
     font-size: 15px;
     padding: 0px 15px;
     text-align: center;
     margin: 0;
+    border-radius: 5px;
 }
 
 .grid-container ul:hover p {
     opacity: 1;
+    bottom: -10px;
+}
+
+.grid-container ul:hover img {
+    transform: translateY(-10px); 
 }
 
 .certification{
@@ -461,6 +469,7 @@ section{
     width: 100%;
     height: 100vh;
     padding: 32px 15%;
+    margin-top: 250px;
 }
 
 
@@ -567,7 +576,7 @@ section{
 
 .Contact-me {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     padding: 32px 15%;
 
@@ -585,7 +594,7 @@ section{
     text-align: start;
     font-size: 15px;
     color: var(--text-color);
-    margin-bottom: 300px;
+    margin-bottom: 330px;
     width: 400px;
 
 }
@@ -613,14 +622,13 @@ margin-bottom: 50px;
     background-color: #191919;
     color: var(--main-color);
     outline: none;
-    resize: vertical;
+    resize: none;
     /* transition-duration: 0.4s; */
     border: 1px solid black;
     /* transition: all 0.3s ease-in-out; */
 }
 
-.box input:hover,
-.box textarea:hover{
+.box input:hover, .box textarea:hover{
     border: 1px solid var(--main-color);
 }
 
@@ -674,6 +682,10 @@ margin-bottom: 50px;
     .navbar li a{
         font-size: 9px;
     }
+    .cm .text {
+        font-size: 10px;
+        /* width: 250px; */
+    }
 }
 
 @media (max-width: 1000px){
@@ -690,8 +702,9 @@ h3{
 }
 
 /* 1 */
-    .navbar a{
+    .navbar li a{
         margin: 0 15px;
+        font-size: 12px;
     }
 
     .logo{
@@ -718,7 +731,8 @@ h3{
 
 /* 2 */
 .about-me{
-    /* height: 100vh; */
+    height: 30vh;
+    margin-top: 200px;
 }
 
 .about-me .inside{
@@ -745,6 +759,10 @@ h3{
 
 
 /* 3 */
+.my-knowledge{
+    margin-top: 400px;
+}
+
 
 .grid-container {
     display: flex;
@@ -788,6 +806,9 @@ h3{
 
 /* 4 */
 
+.My-projects{
+    margin-top: 200px;
+}
 .My-projects h5 {
     font-size: 20px;
     font-weight: 500;
@@ -842,27 +863,37 @@ h3{
 
 
 /* 5 */
-
+.Contact-me {
+    display: flex;
+    align-items: center;     /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    height: 80vh;           /* Full height of the viewport */
+    width: 100vw;            /* Full width of the viewport */
+    overflow: auto;          /* Add this to handle content bigger than viewport */
+}
 
 .cm .text {
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: start;
-    font-size: 12px;
     margin-bottom: 300px;
-    width: 400px;
+    
 }
 
 .cm .text h2{
 margin-bottom: 50px;
 }
 
+/* .cm .text{
+    margin-right: 20px;
+} */
 
-.cm .box {
+
+/* .cm .box {
     margin-left: 150px;
     margin-bottom: 270px;
-}
+} */
 
 .box input,
 .box textarea {
@@ -1007,7 +1038,9 @@ h3{
 }
 
 /* 2 */
-
+.about-me{
+    margin-top: 250px;
+}
 .about-me .inside{
     display: flex;
     align-items: center;
@@ -1161,19 +1194,60 @@ margin-bottom: 30px;
 
 
 /* 1 */
-    .navbar a{
-        margin: 0 15px;
-    }
-
-    .navbar a{
-        margin: 0 5px;
-        font-size: 13px;
+    .navbar li a{
+        margin: 0 8px;
+        font-size: 10px;
     }
 
     .logo{
         font-size: 20px;
     }
 }
+
+@media (max-width: 750px){
+/* 2 */
+.about-me{
+    margin-top: 300px;
+    align-items: center; 
+    justify-content: center;
+}
+
+.about-me .inside{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+}
+
+
+.about-me h2{
+    font-size: 10px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.about-me img {
+    width: 180px;
+    height: auto;
+}
+
+.container li {
+    font-size: x-small;
+}
+
+.container{
+    width: 200px;
+}
+
+    .my-knowledge{
+        margin-top: 500px;
+    }
+
+    .My-projects{
+        margin-top: 300px;
+    }
+
+    }
 
 @media (max-width: 550px){
         
@@ -1229,42 +1303,11 @@ h3{
 /* 1 */
 
 
-/* 2 */
-.about-me{
-    align-items: center; 
-    justify-content: center;
-}
 
-.about-me .inside{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    margin-right: 60px;
-}
-
-
-.about-me h2{
-    font-size: 10px;
-    font-weight: 400;
-    margin-bottom: 20px;
-}
-
-.about-me img {
-    width: 180px;
-    height: auto;
-}
-
-.container li {
-    font-size: x-small;
-}
-
-.container{
-    width: 200px;
-}
 
 /* 3 */
 .my-knowledge{
-    margin-top: 280px;
+    margin-top: 380px;
 }
 .grid-container {
     display: grid;
@@ -1365,13 +1408,25 @@ h3{
 
 
 
+.Contact-me {
+    display: flex;
+    align-items: center;     /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    height: 70vh;           /* Full height of the viewport */
+    width: 100vw;            /* Full width of the viewport */
+    overflow: auto;          /* Add this to handle content bigger than viewport */
+}
+
+
+
 .cm {
-    margin-top: -50px;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    
 }
 
 
@@ -1408,6 +1463,23 @@ margin-bottom: 20px;
 }
 
 @media (max-width: 500px){
+
+                /* all */
+.about-me, .my-knowledge, .certification, .My-projects, .Contact-me{
+    padding: 32px 5%;
+}
+
+.logo{
+    font-size: small;
+}
+
+    .navbar li a{
+        margin: 0px 6px;
+        font-size: 7px;
+    }
+
+    
+
     .scroll-button {
         position: fixed;
         bottom: 20px;
@@ -1422,22 +1494,9 @@ margin-bottom: 20px;
     
 
 
-            /* all */
-.about-me, .my-knowledge, .certification, .My-projects, .Contact-me{
-    padding: 32px 5%;
-    
-
-}
-
 h3{
     font-size: medium;
 }
-
-/* 1 */
-
-    
-/* 2 */
-
 
 .about-me h2{
     font-size: 10px;
@@ -1461,9 +1520,9 @@ h3{
 
 
 /* 3 */
-/* .my-knowledge{
-    margin-top: 180px;
-} */
+.my-knowledge{
+    margin-top: 480px;
+}
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -1571,23 +1630,17 @@ h3{
 }
 }
 
+
+
 @media (max-width: 400px){
 
 
     .navbar li a{
         margin: 0 3px;
-        font-size: 7px;
+        font-size: 6px;
     }
 
 
-
-    .logo{
-        font-size: 20px;
-    }
-    .navbar a{
-        margin: 0 1px;
-        font-size: 1px;
-    }
     .navbar #switch{
         padding: 1px 3px;
         font-size: 8px;
@@ -1650,10 +1703,6 @@ h3{
 
 
 
-.cm {
-    margin-top: -100px;
-}
-
 
 
 .cm .text {
@@ -1671,15 +1720,25 @@ h3{
 /* i have to change the height on on all main. eks 100vh goes to 0 or 10, maybe - */
 
 
-
 @media screen and (max-height: 700px) {
-    .first-page, .about-me, .my-knowledge, .My-projects {margin-bottom: 150px;
+    .first-page, .about-me, .my-knowledge,{margin-bottom: 150px;
     }
+
+    .My-projects{ margin-bottom: 200px;}
 }
 
 @media screen and (max-height: 550px) {
-    .first-page, .about-me, .my-knowledge, .My-projects {margin-bottom: 250px;
+    .first-page, .about-me, .my-knowledge {margin-bottom: 250px;
     }
+
+    .My-projects{margin-bottom: 300px;}
+}
+
+@media screen and (max-height: 520px) {
+
+    .My-projects{margin-bottom: 180px;}
+
+    .Contact-me{ height: 100vh;}
 }
 
 @media screen and (max-height: 500px) {
