@@ -75,44 +75,6 @@ stay.reveal(".home-img",{delay:700, origin: "right"});
 
 
 
-/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////scroll///////////////////////////////////////////////////////////////////////// */
-
-
-
-
-
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href').substring(1); // Remove the "#" symbol
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                let offset = 0; // Default offset
-
-                // Define special offsets for specific sections
-                if (targetId === 'about-me') {
-                    offset = 10; // Adjust as needed
-                } else if (targetId === 'my-knowledge') {
-                    offset = 150; // Adjust as needed
-                } else if (targetId === 'My-projects') {
-                    offset = 0; // Adjust as needed
-                } else if (targetId === 'Contact-me') {
-                    offset = 0; // Adjust as needed
-                }
-
-                window.scrollTo({
-                    top: targetElement.offsetTop - offset, // Apply the offset
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-
 
 
 
@@ -196,3 +158,83 @@ stay.reveal(".home-img",{delay:700, origin: "right"});
         });
     }
     
+
+
+
+
+
+
+
+
+    /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////scroll///////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1); // Remove the "#" symbol
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            let offset = 0; // Default offset
+
+            // Define special offsets for specific sections
+            if (targetId === 'about-me') {
+                offset = 10; // Adjust as needed
+            } else if (targetId === 'my-knowledge') {
+                offset = 150; // Adjust as needed
+            } else if (targetId === 'My-projects') {
+                offset = 0; // Adjust as needed
+            } else if (targetId === 'Contact-me') {
+                offset = 0; // Adjust as needed
+            }
+
+            window.scrollTo({
+                top: targetElement.offsetTop - offset, // Apply the offset
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+
+
+
+
+if (window.matchMedia('(max-width: 1000px)').matches) {
+    // The viewport is 768 pixels wide or less
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1); // Remove the "#" symbol
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                let offset = 0; // Default offset
+
+                // Define special offsets for specific sections
+                if (targetId === 'about-me') {
+                    offset = 220; // Adjust as needed
+                } else if (targetId === 'my-knowledge') {
+                    offset = 150; // Adjust as needed
+                } else if (targetId === 'My-projects') {
+                    offset = 0; // Adjust as needed
+                } else if (targetId === 'Contact-me') {
+                    offset = 0; // Adjust as needed
+                }
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - offset, // Apply the offset
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}
