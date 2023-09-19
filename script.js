@@ -7,20 +7,22 @@
 //     navbar.classList.toggle("open")
 // };
 
-const back = ScrollReveal ({
+const back = ScrollReveal({
     distance: "40px",
     duration: 2500,
     reset: false,
 });
 
-back.reveal(".logo",{delay:100, origin: "left"});
-back.reveal(".navbar",{delay:100, origin: "right"});
-
-const stay = ScrollReveal ({
+const stay = ScrollReveal({
     distance: "40px",
     duration: 2500,
-    reset: false
+    reset: false,
 });
+
+
+
+back.reveal(".logo",{delay:100, origin: "left"});
+back.reveal(".navbar",{delay:100, origin: "right"});
 
 
 stay.reveal(".home-text span",{delay:400, origin: "top"});
@@ -30,18 +32,17 @@ stay.reveal(".main-btn",{delay:700, origin: "left"});
 stay.reveal(".home-img",{delay:700, origin: "right"});
 
 
+stay.reveal(".grid-container",{delay:100, origin: "right"});
+stay.reveal(".certification",{delay:100, origin: "left"});
+stay.reveal(".my-projects-container",{delay:100, origin: "bottom"});
+stay.reveal(".box",{delay:300, origin: "right"});
+stay.reveal(".cm",{delay:100, origin: "left"});
 
 
 // stay.reveal("#scrollToTop",{delay:400, origin: "top"});
 
 
-
-
-
-
-
-
-
+back.reveal(".about-me img", {delay: 700, origin: "right", distance: "3000px"});
 
 
 

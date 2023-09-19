@@ -278,7 +278,7 @@ section{
     height: 100vh;
     display: flex;
     align-items: center; 
-    padding: 32px 15%;
+    padding: 32px 15%;    
 }
 
 .about-me .inside{
