@@ -19,7 +19,7 @@ const stay = ScrollReveal({
     reset: false,
 });
 
-
+back.reveal("h3", {delay: 100, origin: "top"});
 
 back.reveal(".logo",{delay:100, origin: "left"});
 back.reveal(".navbar",{delay:100, origin: "right"});
@@ -31,6 +31,8 @@ stay.reveal(".home-text p",{delay:600, origin: "right"});
 stay.reveal(".main-btn",{delay:700, origin: "left"});
 stay.reveal(".home-img",{delay:700, origin: "right"});
 
+back.reveal(".about-me img", {delay: 300, origin: "right"});
+
 
 stay.reveal(".grid-container",{delay:100, origin: "right"});
 stay.reveal(".certification",{delay:100, origin: "left"});
@@ -39,10 +41,6 @@ stay.reveal(".box",{delay:300, origin: "right"});
 stay.reveal(".cm",{delay:100, origin: "left"});
 
 
-// stay.reveal("#scrollToTop",{delay:400, origin: "top"});
-
-
-back.reveal(".about-me img", {delay: 700, origin: "right", distance: "3000px"});
 
 
 
