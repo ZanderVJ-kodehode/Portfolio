@@ -206,34 +206,97 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
+
+
 if (window.matchMedia('(max-width: 1000px)').matches) {
-    // The viewport is 768 pixels wide or less
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+    document.querySelector('a[href="#about-me"]').addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetElement = document.getElementById('about-me');
 
-            const targetId = this.getAttribute('href').substring(1); // Remove the "#" symbol
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                let offset = 0; // Default offset
-
-                // Define special offsets for specific sections
-                if (targetId === 'about-me') {
-                    offset = 220; // Adjust as needed
-                } else if (targetId === 'my-knowledge') {
-                    offset = 150; // Adjust as needed
-                } else if (targetId === 'My-projects') {
-                    offset = 0; // Adjust as needed
-                } else if (targetId === 'Contact-me') {
-                    offset = 0; // Adjust as needed
-                }
-
-                window.scrollTo({
-                    top: targetElement.offsetTop - offset, // Apply the offset
-                    behavior: 'smooth'
-                });
-            }
-        });
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 180, // Offset for 'about-me' section
+                behavior: 'smooth'
+            });
+        }
     });
 }
+
+
+
+
+
+if (window.matchMedia('(max-width: 800px)').matches) {
+    document.querySelector('a[href="#about-me"]').addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetElement = document.getElementById('about-me');
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 200, // Offset for 'about-me' section
+                behavior: 'smooth'
+            });
+        }
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if (window.matchMedia('(max-width: 1000px)').matches) {
+//     // The viewport is 768 pixels wide or less
+//     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//         anchor.addEventListener('click', function (e) {
+//             e.preventDefault();
+
+//             const targetId = this.getAttribute('href').substring(1); // Remove the "#" symbol
+//             const targetElement = document.getElementById(targetId);
+
+//             if (targetElement) {
+//                 let offset = 0; // Default offset
+
+//                 // Define special offsets for specific sections
+//                 if (targetId === 'about-me') {
+//                     offset = 180; // Adjust as needed
+//                 } else if (targetId === 'my-knowledge') {
+//                     offset = 150; // Adjust as needed
+//                 } else if (targetId === 'My-projects') {
+//                     offset = 0; // Adjust as needed
+//                 } else if (targetId === 'Contact-me') {
+//                     offset = 0; // Adjust as needed
+//                 }
+
+//                 window.scrollTo({
+//                     top: targetElement.offsetTop - offset, // Apply the offset
+//                     behavior: 'smooth'
+//                 });
+//             }
+//         });
+//     });
+// }
