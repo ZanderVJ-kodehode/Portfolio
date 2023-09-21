@@ -22,7 +22,7 @@
 
 body {
     background-image: url(img/beanstalk.webp);
-    background-size: 25vw;
+    background-size: 350px;
     /* background-size: 400px; */
     color: var(--text-color);
     /* overflow-x: hidden; */
