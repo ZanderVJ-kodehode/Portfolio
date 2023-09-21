@@ -20,11 +20,14 @@
     --p-font: 1.1re;
 }
 
-body{
-    background: var(--bg-color);
+body {
+    background-image: url(img/beanstalk.webp);
+    background-size: 25vw;
+    /* background-size: 400px; */
     color: var(--text-color);
-    overflow-x: hidden;;
+    /* overflow-x: hidden; */
 }
+
 
 h3{
     color: var(--main-color);
@@ -1726,7 +1729,8 @@ h3{
 
 
 @media screen and (max-height: 700px) {
-    .first-page, .about-me, .my-knowledge,{margin-bottom: 150px;
+    .first-page, .about-me, .my-knowledge {
+        margin-bottom: 150px;
     }
 
     .My-projects{ margin-bottom: 50px;}
