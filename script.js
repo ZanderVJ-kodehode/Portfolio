@@ -185,9 +185,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
             // Define special offsets for specific sections
             if (targetId === 'about-me') {
-                offset = 10; // Adjust as needed
+                offset = -50; // Adjust as needed
             } else if (targetId === 'my-knowledge') {
-                offset = 150; // Adjust as needed
+                offset = -80; // Adjust as needed
             } else if (targetId === 'My-projects') {
                 offset = 0; // Adjust as needed
             } else if (targetId === 'Contact-me') {
@@ -227,26 +227,39 @@ if (window.matchMedia('(max-width: 1000px)').matches) {
 
 
 
+
+
 if (window.matchMedia('(max-width: 800px)').matches) {
+    // Handler for 'about-me' link
     document.querySelector('a[href="#about-me"]').addEventListener('click', function (e) {
         e.preventDefault();
         
         const targetElement = document.getElementById('about-me');
+        const offset = -50; // Offset for 'about-me' section
 
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop - 200, // Offset for 'about-me' section
+                top: targetElement.offsetTop - offset,
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    // Handler for 'My-projects' link
+    document.querySelector('a[href="#My-projects"]').addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetElement = document.getElementById('My-projects');
+        const offset = -20; // Adjust as needed
+
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - offset,
                 behavior: 'smooth'
             });
         }
     });
 }
-
-
-
-
-
-
 
 
 

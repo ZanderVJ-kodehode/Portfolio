@@ -58,11 +58,11 @@ h3:hover::after {
     transform: scaleX(1);
 }
 
-/* .about-me, .my-knowledge, .certification, .My-projects, .Contact-me{
-    min-height: 100vh; 
+.about-me, .my-knowledge, .My-projects, .Contact-me{
+    min-height: 110vh; 
     
 
-} */
+}
 
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -616,6 +616,9 @@ margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     margin-bottom: 270px;
+    background-color: rgb(93, 91, 91);
+    padding: 20px 10px;
+    border-radius: 10px;
 }
 
 .box input,
@@ -1452,7 +1455,7 @@ margin-bottom: 20px;
 
 
 .cm .box {
-    padding: 20px;
+    /* padding: 1em; */
     max-width: 500px;
     margin: 0 auto;
 }
