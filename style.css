@@ -1807,7 +1807,7 @@ h3{
 }
 
 @media screen and (max-height: 500px) {
-    .first-page, .about-me, .my-knowledge, .My-projects {margin-bottom: 300px;
+    .first-page, .about-me, .my-knowledge, .My-projects {margin-bottom: 200px;
     }
 }
 
