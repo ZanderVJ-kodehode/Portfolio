@@ -25,11 +25,11 @@ back.reveal(".logo",{delay:100, origin: "left"});
 back.reveal(".navbar",{delay:100, origin: "right"});
 
 
-stay.reveal(".home-text span",{delay:400, origin: "top"});
-stay.reveal(".home-text h1",{delay:500, origin: "left"});
-stay.reveal(".home-text p",{delay:600, origin: "right"});
-stay.reveal(".main-btn",{delay:700, origin: "left"});
-stay.reveal(".home-img",{delay:700, origin: "right"});
+stay.reveal(".home-text span",{delay:200, origin: "top"});
+stay.reveal(".home-text h1",{delay:300, origin: "left"});
+stay.reveal(".home-text p",{delay:300, origin: "right"});
+stay.reveal(".main-btn",{delay:400, origin: "left"});
+stay.reveal(".home-img",{delay:400, origin: "right"});
 
 back.reveal(".about-me img", {delay: 300, origin: "right"});
 
@@ -48,16 +48,6 @@ stay.reveal(".cm",{delay:100, origin: "left"});
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////contackt me///////////////////////////////////////////////////////////////////////// */
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -185,9 +175,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
             // Define special offsets for specific sections
             if (targetId === 'about-me') {
-                offset = -50; // Adjust as needed
+                offset = 0; // Adjust as needed
             } else if (targetId === 'my-knowledge') {
-                offset = -80; // Adjust as needed
+                offset = 0; // Adjust as needed
             } else if (targetId === 'My-projects') {
                 offset = 0; // Adjust as needed
             } else if (targetId === 'Contact-me') {
@@ -208,20 +198,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
-if (window.matchMedia('(max-width: 1000px)').matches) {
-    document.querySelector('a[href="#about-me"]').addEventListener('click', function (e) {
-        e.preventDefault();
+// if (window.matchMedia('(max-width: 1000px)').matches) {
+//     document.querySelector('a[href="#about-me"]').addEventListener('click', function (e) {
+//         e.preventDefault();
         
-        const targetElement = document.getElementById('about-me');
+//         const targetElement = document.getElementById('about-me');
 
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 180, // Offset for 'about-me' section
-                behavior: 'smooth'
-            });
-        }
-    });
-}
+//         if (targetElement) {
+//             window.scrollTo({
+//                 top: targetElement.offsetTop - 180, // Offset for 'about-me' section
+//                 behavior: 'smooth'
+//             });
+//         }
+//     });
+// }
 
 
 
@@ -235,7 +225,7 @@ if (window.matchMedia('(max-width: 800px)').matches) {
         e.preventDefault();
         
         const targetElement = document.getElementById('about-me');
-        const offset = -50; // Offset for 'about-me' section
+        const offset = 0; // Offset for 'about-me' section
 
         if (targetElement) {
             window.scrollTo({
@@ -250,7 +240,7 @@ if (window.matchMedia('(max-width: 800px)').matches) {
         e.preventDefault();
         
         const targetElement = document.getElementById('My-projects');
-        const offset = -20; // Adjust as needed
+        const offset = 0; // Adjust as needed
 
         if (targetElement) {
             window.scrollTo({
@@ -313,3 +303,33 @@ if (window.matchMedia('(max-width: 800px)').matches) {
 //         });
 //     });
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
