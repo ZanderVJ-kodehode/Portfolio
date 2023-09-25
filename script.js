@@ -21,8 +21,8 @@ const stay = ScrollReveal({
 
 back.reveal("h3", {delay: 100, origin: "top"});
 
-back.reveal(".logo",{delay:100, origin: "left"});
-back.reveal(".navbar",{delay:100, origin: "right"});
+// back.reveal(".logo",{delay:100, origin: "left"});
+// back.reveal(".navbar",{delay:100, origin: "right"});
 
 
 stay.reveal(".home-text span",{delay:200, origin: "top"});
@@ -160,32 +160,38 @@ stay.reveal(".cm",{delay:100, origin: "left"});
 
 
 
-
-
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        const targetId = this.getAttribute('href').substring(1); // Remove the "#" symbol
+        const targetHref = this.getAttribute('href');
+
+        if (targetHref === "#") {
+            window.scrollTo({
+                top: 0, 
+                behavior: 'smooth'
+            });
+            return;
+        }
+
+        const targetId = targetHref.substring(1); 
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
-            let offset = 0; // Default offset
+            let offset = 0; 
 
-            // Define special offsets for specific sections
             if (targetId === 'about-me') {
-                offset = 0; // Adjust as needed
+                offset = 0; 
             } else if (targetId === 'my-knowledge') {
-                offset = 0; // Adjust as needed
+                offset = 10; 
             } else if (targetId === 'My-projects') {
-                offset = 0; // Adjust as needed
+                offset = 10; 
             } else if (targetId === 'Contact-me') {
-                offset = 0; // Adjust as needed
+                offset = 10; 
             }
 
             window.scrollTo({
-                top: targetElement.offsetTop - offset, // Apply the offset
+                top: targetElement.offsetTop - offset,
                 behavior: 'smooth'
             });
         }
@@ -220,12 +226,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 if (window.matchMedia('(max-width: 800px)').matches) {
-    // Handler for 'about-me' link
+    
     document.querySelector('a[href="#about-me"]').addEventListener('click', function (e) {
         e.preventDefault();
         
         const targetElement = document.getElementById('about-me');
-        const offset = 0; // Offset for 'about-me' section
+        const offset = 0; 
 
         if (targetElement) {
             window.scrollTo({
@@ -235,12 +241,12 @@ if (window.matchMedia('(max-width: 800px)').matches) {
         }
     });
 
-    // Handler for 'My-projects' link
+    
     document.querySelector('a[href="#My-projects"]').addEventListener('click', function (e) {
         e.preventDefault();
         
         const targetElement = document.getElementById('My-projects');
-        const offset = 0; // Adjust as needed
+        const offset = 0; 
 
         if (targetElement) {
             window.scrollTo({
@@ -270,66 +276,18 @@ if (window.matchMedia('(max-width: 800px)').matches) {
 
 
 
-
-
-// if (window.matchMedia('(max-width: 1000px)').matches) {
-//     // The viewport is 768 pixels wide or less
-//     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//         anchor.addEventListener('click', function (e) {
-//             e.preventDefault();
-
-//             const targetId = this.getAttribute('href').substring(1); // Remove the "#" symbol
-//             const targetElement = document.getElementById(targetId);
-
-//             if (targetElement) {
-//                 let offset = 0; // Default offset
-
-//                 // Define special offsets for specific sections
-//                 if (targetId === 'about-me') {
-//                     offset = 180; // Adjust as needed
-//                 } else if (targetId === 'my-knowledge') {
-//                     offset = 150; // Adjust as needed
-//                 } else if (targetId === 'My-projects') {
-//                     offset = 0; // Adjust as needed
-//                 } else if (targetId === 'Contact-me') {
-//                     offset = 0; // Adjust as needed
-//                 }
-
-//                 window.scrollTo({
-//                     top: targetElement.offsetTop - offset, // Apply the offset
-//                     behavior: 'smooth'
-//                 });
-//             }
-//         });
-//     });
-// }
+ /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////makingthe scroll event for the navbar///////////////////////////////////////////////////////////////////////// */
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+window.addEventListener("scroll", function() {
+    var header = document.querySelector("header");
+    if (window.scrollY > 0) {
+        header.classList.add("header-scrolled");
+    } else {
+        header.classList.remove("header-scrolled");
+    }
+});
 
 

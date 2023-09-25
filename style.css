@@ -76,8 +76,54 @@ h3:hover::after {
     height: 100vh;
 }
 
-header{
-    /* position: fixed; ----- if i want it to stay when scroling */
+
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    animation: fadeInFromLeft 2.5s forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+.navbar {
+    animation: fadeInFromRight 2.5s forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+header {
+    position: fixed;
     top: 0;
     right: 0;
     width: 100%;
@@ -85,11 +131,16 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 32px 15%;
+    padding: 5px 15%;
     background: transparent;
     transition: all ease .45s;
-
 }
+
+
+.header-scrolled {
+    background: #2d2d2d; 
+}
+
 
 .logo{
     color: var(--text-color);
@@ -97,6 +148,9 @@ header{
     font-weight: 600;
 
 }
+
+
+
 
 .logo span{
     color: var(--main-color);
