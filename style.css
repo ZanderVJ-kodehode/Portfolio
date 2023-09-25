@@ -614,7 +614,7 @@ section{
     position: absolute; 
     top: 0;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     color: #f1f1f1; 
     width: 100%;
     transition: .5s ease;
@@ -1011,7 +1011,7 @@ margin-bottom: 50px;
     .home{
         height: auto;
         /* display: flex; */
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
     }
     .home-text{
         order: 2;
@@ -1346,7 +1346,7 @@ margin-bottom: 30px;
             
         
             .navbar li a{
-                margin: 0 10px;
+                margin: 10 10px;
                 font-size: 8px;
             }
         
