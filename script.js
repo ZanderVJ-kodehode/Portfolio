@@ -183,7 +183,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             if (targetId === 'about-me') {
                 offset = 0; 
             } else if (targetId === 'my-knowledge') {
-                offset = 10; 
+                offset = 0; 
             } else if (targetId === 'My-projects') {
                 offset = 10; 
             } else if (targetId === 'Contact-me') {

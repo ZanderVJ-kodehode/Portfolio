@@ -656,7 +656,7 @@ section{
     text-align: start;
     font-size: 15px;
     color: var(--text-color);
-    margin-bottom: 330px;
+    margin-bottom: 250px;
     width: 400px;
 
 }
@@ -673,7 +673,7 @@ margin-bottom: 50px;
     margin-left: 200px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 200px;
+    margin-bottom: 80px;
     background-color: rgb(93, 91, 91);
     padding: 20px 10px;
     border-radius: 10px;
@@ -1271,7 +1271,7 @@ margin-bottom: 30px;
 
 .cm .box {
     margin-left: 50px;
-    margin-bottom: 150px;
+    margin-bottom: 80px;
 }
 
 .box input,
