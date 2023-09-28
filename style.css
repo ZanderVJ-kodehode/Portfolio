@@ -1837,15 +1837,16 @@ h3{
     /* .My-projects{ margin-bottom: 50px;} */
 }
 
-@media screen and (max-height: 650px) {
+/* @media screen and (max-height: 650px) {
     
     .first-page, .about-me, .my-knowledge, .My-projects {margin-bottom: 100px;
     }
-}
+} */
 
 @media screen and (max-height: 600px) {
 
-    .My-projects{margin-bottom: 250px;}
+    .first-page, .about-me, .my-knowledge, .My-projects {margin-bottom: 100px;
+    }
 
 }
 
@@ -1864,10 +1865,10 @@ h3{
     .Contact-me{ margin-top: 350px;}
 }
 
-@media screen and (max-height: 500px) {
+/* @media screen and (max-height: 500px) {
     .first-page, .about-me, .my-knowledge, .My-projects {margin-bottom: 300px;
     }
-}
+} */
 
 @media screen and (max-height: 450px) {
 

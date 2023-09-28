@@ -157,8 +157,41 @@ stay.reveal(".cm",{delay:100, origin: "left"});
 
     /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////scroll///////////////////////////////////////////////////////////////////////// */
+function isFullScreen() {
+    return window.innerHeight === screen.height;
+}
 
+function getDynamicOffset(targetId) {
+    const height = window.innerHeight;
 
+    // Adjustments for "my-knowledge" when in full screen mode.
+    if (targetId === "My-projects") {
+        return 30;  // Adjust this value for full screen mode
+    }
+
+    // Specific adjustments for "Contact-me" based on window height.
+    if (targetId === "Contact-me") {
+        if (height <= 500) {
+            return 100;  // Adjust the values here
+        } else if (height <= 580) {
+            return 30;  // And here
+        } 
+    } 
+
+    // Specific adjustments for "my-knowledge" based on window height.
+    else if (targetId === "my-knowledge") {
+        if (height <= 400) {
+            return 150;  // Adjust this value for heights <= 400px
+        } else if (height <= 500) {
+            return 100;  // Adjust the values here as needed
+        } else if (height <= 580) {
+            return 50;  // Adjust the values here as needed
+        } 
+    }
+
+    // Default offset for all other elements.
+    return 20; 
+}
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -168,30 +201,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         if (targetHref === "#") {
             window.scrollTo({
-                top: 0, 
+                top: 0,
                 behavior: 'smooth'
             });
             return;
         }
 
-        const targetId = targetHref.substring(1); 
+        const targetId = targetHref.substring(1);
         const targetElement = document.getElementById(targetId);
 
         if (targetElement) {
-            let offset = 0; 
-
-            if (targetId === 'about-me') {
-                offset = 0; 
-            } else if (targetId === 'my-knowledge') {
-                offset = 30; 
-            } else if (targetId === 'My-projects') {
-                offset = 50; 
-            } else if (targetId === 'Contact-me') {
-                offset = 10; 
-            }
+            const offset = getDynamicOffset(targetId);
+            const rect = targetElement.getBoundingClientRect();
+            const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+            const targetPosition = rect.top + currentScrollPos - offset;
 
             window.scrollTo({
-                top: targetElement.offsetTop - offset,
+                top: targetPosition,
                 behavior: 'smooth'
             });
         }
@@ -203,21 +229,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
-
-// if (window.matchMedia('(max-width: 1000px)').matches) {
-//     document.querySelector('a[href="#about-me"]').addEventListener('click', function (e) {
-//         e.preventDefault();
-        
-//         const targetElement = document.getElementById('about-me');
-
-//         if (targetElement) {
-//             window.scrollTo({
-//                 top: targetElement.offsetTop - 180, // Offset for 'about-me' section
-//                 behavior: 'smooth'
-//             });
-//         }
-//     });
-// }
 
 
 
