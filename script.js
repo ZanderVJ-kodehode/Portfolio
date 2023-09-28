@@ -152,89 +152,85 @@ stay.reveal(".cm",{delay:100, origin: "left"});
 
 
 
-
-
-
-    /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////scroll///////////////////////////////////////////////////////////////////////// */
-function isFullScreen() {
-    return window.innerHeight === screen.height;
-}
-
-function getDynamicOffset(targetId) {
-    const height = window.innerHeight;
-    let offset;  // define offset here
-
-    // Adjustments for "My-projects" when in full screen mode.
-    if (targetId === "My-projects") {
-        offset = 30;  // Adjust this value for full screen mode
-    } else if (targetId === "Contact-me") {
-        if (height <= 500) {
-            offset = 100;  // Adjust the values here
-        } else if (height <= 580) {
-            offset = 30;  // And here
+    function getDynamicOffset(targetId) {
+        const height = window.innerHeight;
+        
+        // Default offset for "My-projects" in full screen
+        if (targetId === "My-projects" && height > 630) {
+            return 20;
         }
-    } else if (targetId === "my-knowledge") {
-        if (height <= 500) {
-            offset = 150;  // Adjust this value for heights <= 500px
-        } else if (height <= 550) {
-            offset = 100;  // Adjust the values here as needed
-        } else if (height <= 630) {
-            offset = 60;  // Adjust the values here as needed
+    
+        // Dynamic offsets for other cases
+        let offset;
+        switch (targetId) {
+            case "My-projects":
+                offset = 30;
+                break;
+            case "Contact-me":
+                if (height <= 500) {
+                    offset = 100;
+                } else if (height <= 580) {
+                    offset = 30;
+                } else {
+                    offset = 0; // Default for other heights
+                }
+                break;
+            case "my-knowledge":
+                if (height <= 500) {
+                    offset = 150;
+                } else if (height <= 550) {
+                    offset = 100;
+                } else if (height <= 630) {
+                    offset = 60;
+                } else {
+                    offset = 0; // Default for other heights
+                }
+                break;
+            case "about-me":
+                if (height <= 500) {
+                    offset = 130;
+                } else {
+                    offset = 50; // Default for other heights
+                }
+                break;
+            default:
+                offset = 0; // Default offset
+                break;
         }
-    } else if (targetId === "about-me") {
-        if (height <= 500) {
-            offset = 130;  // Adjust for "About-me" for heights <= 500px
-        } else {
-            offset = 50;   // Default offset for "About-me" for other heights
-        }
-    } else {
-        offset = 20;  // Default offset for all other elements
+        return offset;
     }
-
-    console.log(`Target ID: ${targetId}, Window Height: ${height}, Offset: ${offset}`);
-    return offset;
-}
-
-
-
-
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetHref = this.getAttribute('href');
-
-        if (targetHref === "#") {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-            return;
-        }
-
-        const targetId = targetHref.substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-            const offset = getDynamicOffset(targetId);
-            const rect = targetElement.getBoundingClientRect();
-            const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
-            const targetPosition = rect.top + currentScrollPos - offset;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            const targetHref = this.getAttribute('href');
+            
+            if (targetHref === "#") {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                return;
+            }
+    
+            const targetId = targetHref.substring(1);
+            const targetElement = document.getElementById(targetId);
+    
+            if (targetElement) {
+                const offset = getDynamicOffset(targetId);
+                const rect = targetElement.getBoundingClientRect();
+                const currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+                const targetPosition = rect.top + currentScrollPos - offset;
+    
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
-});
-
-
-
-
-
+    
 
 
 
