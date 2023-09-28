@@ -183,9 +183,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             if (targetId === 'about-me') {
                 offset = 0; 
             } else if (targetId === 'my-knowledge') {
-                offset = 0; 
+                offset = 30; 
             } else if (targetId === 'My-projects') {
-                offset = 10; 
+                offset = 50; 
             } else if (targetId === 'Contact-me') {
                 offset = 10; 
             }
