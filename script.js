@@ -163,35 +163,42 @@ function isFullScreen() {
 
 function getDynamicOffset(targetId) {
     const height = window.innerHeight;
+    let offset;  // define offset here
 
-    // Adjustments for "my-knowledge" when in full screen mode.
+    // Adjustments for "My-projects" when in full screen mode.
     if (targetId === "My-projects") {
-        return 30;  // Adjust this value for full screen mode
-    }
-
-    // Specific adjustments for "Contact-me" based on window height.
-    if (targetId === "Contact-me") {
+        offset = 30;  // Adjust this value for full screen mode
+    } else if (targetId === "Contact-me") {
         if (height <= 500) {
-            return 100;  // Adjust the values here
+            offset = 100;  // Adjust the values here
         } else if (height <= 580) {
-            return 30;  // And here
-        } 
-    } 
-
-    // Specific adjustments for "my-knowledge" based on window height.
-    else if (targetId === "my-knowledge") {
+            offset = 30;  // And here
+        }
+    } else if (targetId === "my-knowledge") {
         if (height <= 500) {
-            return 150;  // Adjust this value for heights <= 400px
+            offset = 150;  // Adjust this value for heights <= 500px
         } else if (height <= 550) {
-            return 100;  // Adjust the values here as needed
+            offset = 100;  // Adjust the values here as needed
         } else if (height <= 630) {
-            return 60;  // Adjust the values here as needed
-        } 
+            offset = 60;  // Adjust the values here as needed
+        }
+    } else if (targetId === "about-me") {
+        if (height <= 500) {
+            offset = 130;  // Adjust for "About-me" for heights <= 500px
+        } else {
+            offset = 50;   // Default offset for "About-me" for other heights
+        }
+    } else {
+        offset = 20;  // Default offset for all other elements
     }
 
-    // Default offset for all other elements.
-    return 20; 
+    console.log(`Target ID: ${targetId}, Window Height: ${height}, Offset: ${offset}`);
+    return offset;
 }
+
+
+
+
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
