@@ -180,12 +180,12 @@ function getDynamicOffset(targetId) {
 
     // Specific adjustments for "my-knowledge" based on window height.
     else if (targetId === "my-knowledge") {
-        if (height <= 400) {
+        if (height <= 500) {
             return 150;  // Adjust this value for heights <= 400px
-        } else if (height <= 500) {
+        } else if (height <= 550) {
             return 100;  // Adjust the values here as needed
-        } else if (height <= 580) {
-            return 50;  // Adjust the values here as needed
+        } else if (height <= 630) {
+            return 60;  // Adjust the values here as needed
         } 
     }
 
