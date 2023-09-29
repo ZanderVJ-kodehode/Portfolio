@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // for navbaren og logoen
-
+// veldig fint på laptopen
 
 
 function getDynamicOffset(targetId) {
@@ -205,7 +205,7 @@ function getDynamicOffset(targetId) {
 
     // Default offset for "My-projects" and "my-knowledge" in full screen
     if ((targetId === "My-projects" || targetId === "my-knowledge") && height > 630) {
-        return 20;
+        return 50;
     }
 
     let offset;
@@ -336,7 +336,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
-
+// kan brukes til og bytte om jeg vil
 
 
 
