@@ -222,19 +222,24 @@ section{
 
 .home-img{
     /* width and height is both on 60% */
-    width: 50%;
-    height: 40%;
+    width: 60%;
+    height: 60%;
     object-fit: contain;
     animation: img 3s ease-in-out infinite;
     animation-delay: 0.5s;
+
+    /* chat gpt- to make it centerd */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.home-img img{
+.home-img img {
     border-radius: 50%;
     width: 300px;
     height: auto;
-    margin-left: 100px;
-    
+    /* remove margin-left */
 }
 
 @keyframes img{
