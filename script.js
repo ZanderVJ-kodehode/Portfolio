@@ -205,7 +205,7 @@ function getDynamicOffset(targetId) {
 
     // Default offset for "My-projects" and "my-knowledge" in full screen
     if ((targetId === "My-projects" || targetId === "my-knowledge") && height > 630) {
-        return 50;
+        return 30;
     }
 
     let offset;
@@ -470,5 +470,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 
-
-
+function toggleNavbar() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('open');
+}

@@ -171,7 +171,7 @@ header {
 .navbar li a{
     font-size: 15px;
 }
-.navbar #switch{
+header #switch{
     color: var(--main-color);
     background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
     box-shadow: 0px 20px 40px #00000070;
@@ -182,7 +182,7 @@ header {
     transition: all ease .50s;
 }
 
-.navbar #switch:hover{
+header #switch:hover{
     border-color: var(--main-color);
 }
 
@@ -447,7 +447,7 @@ section{
     padding: 32px 15%;
 }
 .my-knowledge h3{
-    margin: 20px 0px;
+    margin: 30px 0px;
 }
 .grid-container {
     display: flex;
@@ -1030,11 +1030,6 @@ margin-bottom: 50px;
 }
 
 @media (max-width: 800px){
-    .navbar{
-        margin: 0 5px;
-
-    }
-
     
 .scroll-button {
     width: 30px;
@@ -1060,9 +1055,11 @@ h3{
 
 /* 1 */
 
-.navbar a{
-    margin: 0 15px;
+.navbar{
+    /*  */
 }
+
+
 
 .logo{
     font-size: 20px;
