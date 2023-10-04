@@ -212,16 +212,8 @@ function getDynamicOffset(targetId) {
     switch (targetId) {
         case "My-projects":
         case "my-knowledge":
-            offset = 30;
-            break;
-        case "Contact-me":
-            if (height <= 500) {
-                offset = 100;
-            } else if (height <= 580) {
-                offset = 30;
-            } else {
-                offset = 0; // Default for other heights
-            }
+            case "Contact-me":
+            offset = 0;
             break;
         case "about-me":
             const targetElement = document.getElementById(targetId);
@@ -474,3 +466,11 @@ function toggleNavbar() {
     const navbar = document.querySelector('.navbar');
     navbar.classList.toggle('open');
 }
+
+
+
+
+
+
+
+
