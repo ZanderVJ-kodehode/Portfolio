@@ -1937,3 +1937,19 @@ h3{
     }
 
 } */
+
+
+@media (min-width: 1800px) {
+
+    header .logo{
+        font-size: 50px;
+    }
+    .navbar li a{
+        font-size: 20px;
+    }
+
+    header #switch {
+        font-size: 20px;
+    }
+}
+
