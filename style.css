@@ -1942,14 +1942,14 @@ h3{
 @media (min-width: 1800px) {
 
     header .logo{
-        font-size: 50px;
+        font-size: 45px;
     }
     .navbar li a{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     header #switch {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
